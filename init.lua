@@ -1,10 +1,11 @@
+--https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
-
+vim.g.mapleader = " "
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -20,23 +21,29 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  { "hrsh7th/nvim-cmp", name = "nvim-cmp", priority = 1000 },
-  { "nvim-lua/plenary.nvim" },
-  { "nvim-tree/nvim-web-devicons" } , -- not strictly required, but recommended
-  { "MunifTanjim/nui.nvim" },
-  { "nvim-neo-tree/neo-tree.nvim", name = "neo-tree" },
-
-  { "neovim/node-client" }
-
+  {
+      'nvim-telescope/telescope.nvim', tag = '0.1.6',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
 }
 local opts = {}
 
-
 require("lazy").setup(plugins,opts)
+
+local builtin = require("telescope.builtin")
+vim.keymap.set("n","<C-p>", builtin.find_files, {})
+vim.keymap.set("n","<leader>fg",builtin.live_grep, {})
+
+local config = require("nvim-treesitter.configs")
+config.setup({
+    ensure_installed = {"lua", "javascript" },
+    highlight = { enable = true },
+    indent = { enable = true },
+  })
+
 require("catppuccin").setup()
 vim.cmd.colorscheme "catppuccin"
+
 print("hello world!")
-
-
-
 
