@@ -9,7 +9,15 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "pyright", "sqlls", "csharp_ls" }
+        ensure_installed = {
+          "lua_ls",
+          "tsserver",
+          "pyright",
+          "sqlls",
+          "csharp_ls",
+          "gopls",
+          "html"
+        }
       })
     end
   },
@@ -22,10 +30,12 @@ return {
       lspconfig.pyright.setup({})
       lspconfig.sqlls.setup({})
       lspconfig.csharp_ls.setup({})
+      lspconfig.gopls.setup({})
+      lspconfig.html.setup({})
       vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {})
-      vim.keymap.set({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, {})
-      vim.keymap.set("n", "<leader>cr",vim.lsp.buf.references, {})
+      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+      vim.keymap.set("n", "<leader>cr", vim.lsp.buf.references, {})
       vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, {})
     end
   }
