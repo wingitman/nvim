@@ -13,7 +13,7 @@ return {
 
 				null_ls.builtins.completion.spell,
 
-        null_ls.builtins.diagnostics.eslint,
+        --null_ls.builtins.diagnostics.eslint,
 			},
 		})
 		vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, {})
