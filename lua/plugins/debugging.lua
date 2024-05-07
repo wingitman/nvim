@@ -5,6 +5,7 @@ return {
 		"nvim-neotest/nvim-nio",
 		"leoluz/nvim-dap-go",
 		"NicholasMata/nvim-dap-cs",
+    "Samsung/netcoredbg",
 	},
 	config = function()
 		local dap, dapui = require("dap"), require("dapui")
@@ -20,7 +21,7 @@ return {
 				},
 			},
 			netcoredbg = {
-				path = "netcoredbg",
+				path = "~/.local/share/nvim/lazy/netcoredbg/build",
 			},
 		})
 
@@ -36,7 +37,10 @@ return {
 		dap.listeners.before.event_exited.dapui_config = function()
 			dapui.close()
 		end
-		vim.keymap.set("n", "<leader>cb", dap.toggle_breakpoint, {})
-		vim.keymap.set("n", "<leader>cc", dap.continue, {})
+		vim.keymap.set("n", "<F9>", dap.toggle_breakpoint, {})
+		vim.keymap.set("n", "<leader>dd", dap.continue, {})
+		vim.keymap.set("n", "<F10>", dap.step_over, {})
+		vim.keymap.set("n", "<F11>", dap.step_into, {})
+		vim.keymap.set("n", "<F12>", dap.step_out, {})
 	end,
 }
