@@ -5,14 +5,14 @@ return {
 		"nvim-neotest/nvim-nio",
 		"leoluz/nvim-dap-go",
 		"NicholasMata/nvim-dap-cs",
-    "Samsung/netcoredbg",
+		"Samsung/netcoredbg",
 	},
 	config = function()
 		local dap, dapui = require("dap"), require("dapui")
 		require("dapui").setup({})
 		require("dap-go").setup({})
 		require("dap-cs").setup({
-			dap_configurations = {
+    dap_configurations = {
 				{
 					type = "coreclr",
 					name = "Attach remote",
@@ -21,10 +21,9 @@ return {
 				},
 			},
 			netcoredbg = {
-				path = "~/.local/share/nvim/lazy/netcoredbg/build",
+				path = "~/wing/.local/share/nvim/lazy/netcoredbg",
 			},
 		})
-
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
 		end
