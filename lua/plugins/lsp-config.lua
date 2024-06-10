@@ -16,8 +16,6 @@ return {
           "lua_ls",
           "tsserver",
           "pyright",
-          "sqlls",
-          "csharp_ls",
           "html",
         },
       })
@@ -42,14 +40,7 @@ return {
       vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, {})
 
       -- setup diagnostics
-      vim.diagnostic.config({ virtual_text = false })
-      vim.api.nvim_create_autocmd({ "CursorHold" }, {
-        callback = function()
-          if vim.lsp.buf.server_ready() then
-            vim.diagnostic.open_float()
-          end
-        end,
-      })
+      vim.diagnostic.config({ virtual_text = true })
 
       -- set up LSP signs
       for type, icon in pairs({
