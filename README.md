@@ -22,5 +22,3 @@
 <leader>db - dap.continue (debugger open)
 <leader>p - find_files
 <leader>fg - live_grep
-<leader> gh - Preview hunk
-<leader> gb - Toggle Blame
