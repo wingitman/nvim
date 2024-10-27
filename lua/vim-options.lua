@@ -1,3 +1,4 @@
+
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
@@ -15,7 +16,13 @@ vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
-
+-- Sets colors to line numbers Above, Current and Below  in this order
+function LineNumberColors()
+    vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#51B3EC', bold=true })
+    vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
+    vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#FB508F', bold=true })
+end
+LineNumberColors()
 --OTHER KEYBINDS:
 --[[
 <leader>dd - diagnost open_float

@@ -1,11 +1,11 @@
 return {
-	"mfussenegger/nvim-dap",
+	"NicholasMata/nvim-dap-cs",
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
 		"nvim-neotest/nvim-nio",
 		"leoluz/nvim-dap-go",
-		"NicholasMata/nvim-dap-cs",
-		"Samsung/netcoredbg",
+		"mfussenegger/nvim-dap",
+    "Samsung/netcoredbg",
 	},
 	config = function()
 		local dap, dapui = require("dap"), require("dapui")
@@ -21,7 +21,7 @@ return {
 				},
 			},
 			netcoredbg = {
-				path = "~/wing/.local/share/nvim/lazy/netcoredbg",
+				path = "/home/root/.config/netcoredbg/src",
 			},
 		})
 		dap.listeners.before.attach.dapui_config = function()
