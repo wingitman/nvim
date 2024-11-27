@@ -1,5 +1,15 @@
 # KEYBINDS:
 ## Tmux
+install tpm: https://github.com/tmux-plugins/tpm
+
+tmux source ~/.tmux.conf
+
+prefix + I
+
+##zsh
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 
 ## Other
 <leader>dd - diagnost open_float
