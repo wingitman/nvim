@@ -6,7 +6,7 @@ tmux source ~/.tmux.conf
 
 prefix + I
 
-##zsh
+## zsh
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
