@@ -6,6 +6,7 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set nowrap")
+vim.cmd("set scrolloff=999")
 vim.g.mapleader = " "
 vim.g.background = "light"
 
