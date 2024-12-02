@@ -17,7 +17,8 @@ return {
           "tsserver",
           "pyright",
           "html",
-          "gopls"
+          "gopls",
+          "csharp_ls"
         },
       })
     end,
@@ -35,6 +36,7 @@ return {
       lspconfig.csharp_ls.setup({ capabilities = capabilities })
       lspconfig.html.setup({ capabilities = capabilities })
       lspconfig.gopls.setup({ capabilities = capabilities })
+      lspconfig.csharp_ls.setup({ capabilities = capabilities })
 
       vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {})
