@@ -17,6 +17,7 @@ vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
+
 -- Sets colors to line numbers Above, Current and Below  in this order
 function LineNumberColors()
     vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#51B3EC', bold=true })
@@ -26,7 +27,7 @@ end
 LineNumberColors()
 --OTHER KEYBINDS:
 --[[
-<leader>dd - diagnost open_float
+<leader>cd - diagnost open_float
 <leader>cf - lsp.buf.format
 <leader>cr - lsp.buf.references
 <leader>ca - lsp.buf.code_actions
