@@ -11,6 +11,7 @@ return {
 				null_ls.builtins.formatting.isort,
 				null_ls.builtins.completion.spell,
         null_ls.builtins.formatting.markdown,
+        null_ls.builtins.formatting.sqlfmt
 			},
 		})
 	end,

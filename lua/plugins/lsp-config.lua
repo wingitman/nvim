@@ -15,8 +15,11 @@ return {
         ensure_installed = {
           "lua_ls",
           "tsserver",
+          "sqlls",
           "pyright",
           "html",
+          "gopls",
+          "csharp_ls",
         },
       })
     end,
@@ -32,6 +35,7 @@ return {
       lspconfig.sqlls.setup({ capabilities = capabilities })
       lspconfig.csharp_ls.setup({ capabilities = capabilities })
       lspconfig.html.setup({ capabilities = capabilities })
+      lspconfig.gopls.setup({ capabilities = capabilities })
 
       vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {})
