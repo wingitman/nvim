@@ -1,5 +1,5 @@
 if true then
-  return
+  return {}
 end
 return {
   "wingitman/MotionSensei",
