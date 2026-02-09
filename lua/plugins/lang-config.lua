@@ -25,6 +25,7 @@ return {
         -- TypeScript / Angular
         "typescript-language-server",
         "angular-language-server",
+        "prettierd",
         "prettier",
         "eslint-lsp",
         "js-debug-adapter",
@@ -39,6 +40,7 @@ return {
         -- General
         "stylua",
         "shfmt",
+        "markdown",
       },
     },
   },
