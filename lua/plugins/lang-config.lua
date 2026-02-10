@@ -40,7 +40,7 @@ return {
         -- General
         "stylua",
         "shfmt",
-        "markdown",
+        "marksman",
       },
     },
   },
