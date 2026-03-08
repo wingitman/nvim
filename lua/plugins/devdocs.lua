@@ -13,7 +13,9 @@ return {
     -- Possible options are 'ui_select', 'telescope', and 'snacks'
   end,
   keys = {
-    { "<leader>dg", "<cmd>ApidocsOpen<cr>", desc = "Search Api Doc" },
+    { "<leader>dg", "<cmd>ApidocsOpen<cr>",    desc = "Search Api Doc" },
     { "<leader>di", "<cmd>ApidocsInstall<cr>", desc = "Install Api Doc" },
   },
 }
+
+--  // The 'elinks', 'rg' and 'find' programs must be installed to proceed, refusing to run.
