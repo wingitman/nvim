@@ -3,14 +3,14 @@ return {
   config = function()
     require("screenkey").setup({
       win_opts = {
-        row = vim.o.lines - vim.o.cmdheight - 1,
+        row = 1,--vim.o.lines - vim.o.cmdheight - 4,
         col = vim.o.columns - 1,
         relative = "editor",
-        anchor = "SE",
-        width = 40,
-        height = 3,
-        border = "single",
-        title = "Screenkey",
+        anchor = "NE",
+        width = 30,
+        height = 2,
+        border = "none",
+        title = "",
         title_pos = "center",
         style = "minimal",
         focusable = false,
@@ -21,9 +21,9 @@ return {
         ["screenkey.hl.map"] = { link = "Normal" },
         ["screenkey.hl.sep"] = { link = "Normal" },
       },
-      winblend = 0,
+      winblend = 1,
       compress_after = 3,
-      clear_after = 3,
+      clear_after = 2,
       emit_events = true,
       disable = {
         filetypes = {},
@@ -31,7 +31,7 @@ return {
         modes = {},
       },
       show_leader = true,
-      group_mappings = false,
+      group_mappings = true,
       display_infront = {},
       display_behind = {},
       filter = function(keys)
@@ -72,7 +72,7 @@ return {
         ["CTRL"] = "Ctrl",
         ["ALT"] = "Alt",
         ["SUPER"] = "󰘳",
-        ["<leader>"] = "<leader>",
+        ["<leader>"] = "_",
       },
       notify_method = "echo",
       log = {
@@ -80,6 +80,6 @@ return {
         filepath = vim.fn.stdpath("data") .. "/screenkey_log",
       },
     })
-    vim.cmd("Screenke ")
+    vim.cmd("Screenkey")
   end,
 }
