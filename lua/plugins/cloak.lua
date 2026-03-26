@@ -1,5 +1,12 @@
 return {
   "laytan/cloak.nvim",
+  cmd = { "CloakEnable", "CloakDisable", "CloakPreviewLine", "CloakToggle" },
+  keys = {
+    { "<leader>cct", "<cmd>CloakToggle<cr>",      desc = "Cloak Toggle" },
+    { "<leader>ccp", "<cmd>CloakPreviewLine<cr>", desc = "... Previe Line" },
+    { "<leader>ccd", "<cmd>CloakDisable<cr>",     desc = "... Disable" },
+    { "<leader>cce", "<cmd>CloakEnable<cr>",      desc = "... Enable" },
+  },
   config = function()
     require('cloak').setup({
       enabled = true,

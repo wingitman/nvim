@@ -1,9 +1,9 @@
-return {
+local disabled = {
   "NStefan002/screenkey.nvim",
   config = function()
     require("screenkey").setup({
       win_opts = {
-        row = 1,--vim.o.lines - vim.o.cmdheight - 4,
+        row = 1, --vim.o.lines - vim.o.cmdheight - 4,
         col = vim.o.columns - 1,
         relative = "editor",
         anchor = "NE",
@@ -83,3 +83,4 @@ return {
     vim.cmd("Screenkey")
   end,
 }
+return {}
