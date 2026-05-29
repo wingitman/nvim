@@ -1,13 +1,13 @@
 return {
   "wingitman/awstoolkitwrapper.nvim",
   keys = {
-    { "<leader>als", "<cmd>AwsToolkitSsoLogin<cr>", desc = "AwsToolkit: " },
-    { "<leader>all", "<cmd>AwsToolkitListLambdas<cr>", desc = "AwsToolkit: " },
-    { "<leader>ali", "<cmd>AwsToolkitInvokeLambda<cr>", desc = "AwsToolkit: " },
-    { "<leader>alu", "<cmd>AwsToolkitUploadLambdaZip<cr>", desc = "AwsToolkit: " },
-    { "<leader>ald", "<cmd>AwsToolkitDownloadLambda<cr>", desc = "AwsToolkit: " },
-    { "<leader>alb", "<cmd>AwsToolkitSamBuild<cr>", desc = "AwsToolkit: " },
-    { "<leader>ald", "<cmd>AwsToolkitSamDeploy<cr>", desc = "AwsToolkit: " },
+    { "<leader>als", "<cmd>AwsToolkitSsoLogin<cr>", desc = "AwsToolkit: SSO" },
+    { "<leader>all", "<cmd>AwsToolkitListLambdas<cr>", desc = "AwsToolkit: List" },
+    { "<leader>ali", "<cmd>AwsToolkitInvokeLambda<cr>", desc = "AwsToolkit: Invoke" },
+    { "<leader>alu", "<cmd>AwsToolkitUploadLambdaZip<cr>", desc = "AwsToolkit: Upload" },
+    { "<leader>ald", "<cmd>AwsToolkitDownloadLambda<cr>", desc = "AwsToolkit: Download" },
+    { "<leader>alsb", "<cmd>AwsToolkitSamBuild<cr>", desc = "AwsToolkit: SamBuild" },
+    { "<leader>alsd", "<cmd>AwsToolkitSamDeploy<cr>", desc = "AwsToolkit: SamDeploy" },
   },
   config = function()
     require("awstoolkitwrapper").setup({
